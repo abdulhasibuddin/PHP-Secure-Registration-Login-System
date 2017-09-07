@@ -5,7 +5,7 @@
         $ = beginning/end of string
         \S* = any set of characters
         (?=\S{8,}) = of at least length 8
-        (?=\S{,255}) = of maximum length 255
+        (?=\S{1,255}) = of maximum length 255
         (?=\S*[a-z]) = containing at least one lowercase letter
         (?=\S*[A-Z]) = and at least one uppercase letter
         (?=\S*[\d]) = and at least one number
