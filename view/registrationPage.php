@@ -1,7 +1,3 @@
-<?php 
-	//require '../content/registrationPage2.php';
-	//require '../content/passwordValidation.php';
-?>
 <!--This file generates the registration page front-end design::-->
 <!DOCTYPE html>
 <html>
