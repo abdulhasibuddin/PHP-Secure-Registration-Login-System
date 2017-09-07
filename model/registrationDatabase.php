@@ -22,10 +22,5 @@
 	$conn->close(); //Closing connection
 //--------------------------------------------------------------------------------------------------------------------------------
 
-	
-	/*$subject = 'Activate your account'; //Subject of the email
-	$message = 'Your account activation code is: '.$verCode; //Message including the account activation code
-	require 'sendEmail.php'; //This file mails the account activation code to the user*/
-
 	header("location: ../view/authenticatedUser.php"); //Take the user to the authenticated page. In this stage, it will automatically load the 'login' page
 ?>
