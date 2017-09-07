@@ -4,20 +4,6 @@
 	require 'config.php'; //Opening connection
 //--------------------------------------------------------------------------------------------------------------------------------
 
-/*
-	//Generating random code for account verification::
-	$verLetter = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'; //String containing characters to be used to generate the verification code
-	$verLength = strlen($verLetter); //Getting the length (i.e. total number of characters) of the string to be used
-	$verCode = ''; //Declaring an empty variable to hold the randomly generated characters
-
-	for ($i=0; $i<8 ; $i++) { //Looping 8 times to generate 8 characters long verification code
-		$verCode .= $verLetter[rand(0, $verLength-1)]; //Appending every randomly generated character to the variable $verCode
-	}
-
-	$verCode_hash = password_hash($verCode, PASSWORD_DEFAULT); //Password hashing*/
-//--------------------------------------------------------------------------------------------------------------------------------
-
-
 	//Prepared statement:: (prevents sql injection into the database)::
 	$stmt = $conn->prepare("INSERT INTO registrationTable (firstName, lastName, eMail, userName, password, gender) VALUES (?, ?, ?, ?, ?, ?)");
 
@@ -41,5 +27,5 @@
 	$message = 'Your account activation code is: '.$verCode; //Message including the account activation code
 	require 'sendEmail.php'; //This file mails the account activation code to the user*/
 
-	header("location: ../view/authenticatedUser.php"); //Take the user to the account verification page
+	header("location: ../view/authenticatedUser.php"); //Take the user to the authenticated page. In this stage, it will automatically load the 'login' page
 ?>
